@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Controle de Tarefas</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="container">
+<header>
+<h1>Controle de Tarefas</h1>
+<p>Gerencie suas tarefas utilizando uma API REST.</p>
+</header>
+<section class="cadastro">
+<h2>Nova tarefa</h2>
+<div class="formulario">
+<input type="text" id="titulo" placeholder="Digite uma tarefa" autocomplete="off">
+<select id="prioridade" aria-label="Prioridade da tarefa">
+<option value="BAIXA">Baixa</option>
+<option value="MEDIA">Média</option>
+<option value="ALTA">Alta</option>
+</select>
+<button id="btnCadastrar">Cadastrar</button>
+</div>
+<p id="mensagem"></p>
+</section>
+<section class="lista">
+<div class="lista-cabecalho">
+<h2>Tarefas cadastradas</h2>
+<button id="btnAtualizar" class="btn-atualizar">Atualizar</button>
+</div>
+<div id="listaTarefas"></div>
+</section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

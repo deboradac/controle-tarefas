@@ -1,0 +1,246 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+header p {
+    margin-top: 0;
+    color: #666;
+}
+
+section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.formulario {
+    display: flex;
+    gap: 10px;
+}
+
+input,
+select {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: white;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #2d6cdf;
+}
+
+button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+#btnCadastrar {
+    background-color: #2d6cdf;
+    color: white;
+}
+
+.btn-atualizar {
+    background-color: #6c757d;
+    color: white;
+}
+
+#mensagem {
+    min-height: 20px;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.mensagem-sucesso {
+    color: #198754;
+}
+
+.mensagem-erro {
+    color: #dc3545;
+}
+
+.lista-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.lista-cabecalho h2 {
+    margin-bottom: 0;
+}
+
+.tarefa {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.tarefa:last-child {
+    border-bottom: none;
+}
+
+.tarefa-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.tarefa-titulo {
+    margin: 0;
+    word-wrap: break-word;
+    font-size: 16px;
+}
+
+.tarefa-detalhes {
+    margin: 5px 0 0;
+    font-size: 13px;
+    color: #777;
+}
+
+.prioridade {
+    display: inline-block;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.tarefa-acoes {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.btn-concluir {
+    background-color: #198754;
+    color: white;
+}
+
+.btn-desfazer {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.btn-excluir {
+    background-color: #dc3545;
+    color: white;
+}
+
+.concluida .tarefa-titulo {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.sem-tarefas {
+    text-align: center;
+    padding: 20px 0;
+    color: #777;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    .formulario {
+        flex-direction: column;
+    }
+
+    .formulario input,
+    .formulario select,
+    .formulario button {
+        width: 100%;
+    }
+
+    .lista-cabecalho {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .lista-cabecalho h2 {
+        text-align: center;
+    }
+
+    .btn-atualizar {
+        width: 100%;
+    }
+
+    .tarefa {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .tarefa-info {
+        width: 100%;
+    }
+
+    .tarefa-detalhes {
+        line-height: 1.6;
+    }
+
+    .prioridade {
+        display: block;
+        margin-left: 0;
+    }
+
+    .tarefa-acoes {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tarefa-acoes button {
+        width: 100%;
+    }
+}
